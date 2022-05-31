@@ -1,6 +1,6 @@
 # Learning Loss for Active Learning
-NUM_TRAIN = 50000 # N
-NUM_VAL   = 50000 - NUM_TRAIN
+NUM_TRAIN = 65862 # 50000 # N
+NUM_VAL   = 16466 # 50000 - NUM_TRAIN
 BATCH     = 32 # B
 SUBSET    = 1000 # 10000 M
 ADDENDUM  = 100 # 1000 K
@@ -8,7 +8,7 @@ ADDENDUM  = 100 # 1000 K
 MARGIN = 1.0 # xi
 WEIGHT = 0.1 # lambda
 
-TRIALS = 3
+TRIALS = 1 # 3
 CYCLES = 10
 
 EPOCH = 100 # 200

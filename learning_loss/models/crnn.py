@@ -75,3 +75,16 @@ class CRNN(nn.Module):
                 nn.ReLU()
             ]
         return nn.Sequential(*conv)
+
+    def reset_parameters(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                m.reset_parameters()
+            elif isinstance(m, nn.BatchNorm2d):
+                m.reset_parameters()
+            elif isinstance(m, nn.Linear):
+                m.reset_parameters()
+            elif isinstance(m, nn.BatchNorm1d):
+                m.reset_parameters()
+            elif isinstance(m, nn.LSTM):
+                m.reset_parameters()
